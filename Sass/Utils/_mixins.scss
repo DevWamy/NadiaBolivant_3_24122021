@@ -1,0 +1,14 @@
+/***** MIXINS *******/
+
+/* box shadow styles */
+@mixin box--shadow($style) {
+    @if ($style=="light") {
+    box-shadow: 3px 6px 8px 0px rgba(0, 0, 0,0.15);
+    }
+    @else if ($style == "header") {
+        box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.3);
+    }
+    @else if ($style == "dark") {
+        box-shadow: 3px 6px 8px 0px rgba(0, 0, 0,0.3);    
+    }
+}

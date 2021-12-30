@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevWamy/NadiaBolivant_3_24122021.git"
   },
-  "author": "",
+  "author": "DevWamy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DevWamy/NadiaBolivant_3_24122021/issues"

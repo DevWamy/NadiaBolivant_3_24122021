@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* Utils.(Variables.Fonctions.Mixins.Placeholders)
+Feuilles de style de tiers (vendors) (si vous en avez).
+Base.
+Composants.
+Layout.
+Pages.
+Thèmes.*/
+/* fonts */
+/*colors*/
+/***** MIXINS *******/
+/* box shadow styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  padding: 16px;
+  position: relative;
+  /* To show the boxshadow*/
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+header .logo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+header .logo img {
+  object-fit: contain;
+  max-width: 161px;
+  width: 161px;
+}
+
+/*# sourceMappingURL=style.css.map */
