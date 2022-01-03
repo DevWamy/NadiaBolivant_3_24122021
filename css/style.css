@@ -10,6 +10,7 @@ Thèmes.*/
 /*colors*/
 /***** MIXINS *******/
 /* box shadow styles */
+/* police de form */
 * {
   box-sizing: border-box;
 }
@@ -63,6 +64,36 @@ header .logo img {
   object-fit: contain;
   max-width: 161px;
   width: 161px;
+}
+
+form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: #EAEAEA;
+}
+form label {
+  margin-left: 80px;
+  color: #353535;
+}
+form p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+form input {
+  font-size: 16px;
+  color: #353535;
+  font-weight: bold;
+  padding: 16px;
+  border: none;
+  background: none;
+  border: 2px solid transparent;
+}
+form input:focus-visible, form input:focus, form input:hover {
+  border-bottom: 2px solid #99E2D0;
+  outline: none;
 }
 
 footer {

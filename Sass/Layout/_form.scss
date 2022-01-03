@@ -1,0 +1,31 @@
+form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background: $background-dark;
+
+        label{
+            margin-left: 80px;
+            color: $font-secondary;
+        }
+        p{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        input {
+            @include form_police;
+            padding: 16px;
+            border: none;
+            background: none;
+            border: 2px solid transparent;
+        }
+
+        input:focus-visible, input:focus, input:hover {
+            border-bottom: 2px solid $tertiary-color;
+            outline: none;
+        }
+
+}
