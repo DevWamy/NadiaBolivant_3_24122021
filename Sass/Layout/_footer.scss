@@ -1,0 +1,36 @@
+footer {
+    padding: 0;
+    background: $background-black;
+    display: flex;
+    flex-flow: row wrap;
+
+        .footer-container {
+            max-width: 990px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        h3 {
+            font-family: $font-title;
+            font-weight: 100;
+            margin: 0px;
+        }
+        a:hover {
+            color: $tertiary-color;
+        }
+
+        ul { 
+            padding: 0;
+            color: white; 
+        }
+
+        a {
+            color: white;
+            line-height: 29px;
+        }
+
+        i {
+             margin-right: 8px;
+            width: 16px;
+            }
+}
