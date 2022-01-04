@@ -13,3 +13,5 @@ $tertiary-color: #99E2D0;
 $background-light: #f6f6f6;
 $background-dark: #EAEAEA;
 $background-black: #353535;
+$color-gradient: linear-gradient(171deg, #ff79da 0%, #9356dc 100%);
+$gradient-clearer: linear-gradient(171deg, lighten($secondary-color, 5%) 0%,lighten($primary-color, 5%) 100%);

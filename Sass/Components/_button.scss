@@ -1,0 +1,23 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    background: $secondary-color;
+    background: $color-gradient;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    @include box--shadow("light");
+    &:hover {
+      /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
+  L’ombre portée devra également être plus visible.*/
+      background: $gradient-clearer;
+      @include box--shadow("dark");
+    }
+  }
+  
