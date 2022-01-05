@@ -1,0 +1,61 @@
+.functioning {
+
+    background-color: white;
+   
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 0px;
+        margin-left: 40px;
+    }
+
+    ul {
+        padding-left: 0px;
+        margin: 32px auto;
+        }
+
+        li {
+            margin-left: 40px;
+        }
+
+    &__instruction {
+        display: flex;
+        margin: 24px auto;
+
+            .number {
+                padding: 4px 8px;
+                background: $primary-color;
+                border-radius: 50%;
+                align-self: center;
+                font-size: small;
+                color: white;
+                margin-right: -10px;
+                z-index: 2;
+            }
+
+            div {
+                padding: 14px;
+                border-radius: 24px;
+                background: $background-light;
+                box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+                width: 80%;
+                font-weight: bold;
+            }
+            
+            div i {
+                font-size: 20px;
+                color: $picto-color;
+                padding: 16px;
+            }
+    }
+
+    &__instruction:hover {
+        
+        div { 
+        background-color: $background-blue;
+        }
+
+        div i {
+            color: $primary-color;
+        }
+    }
+}

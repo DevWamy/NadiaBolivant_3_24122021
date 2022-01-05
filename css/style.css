@@ -109,7 +109,7 @@ form input:focus-visible, form input:focus, form input:hover {
   height: 50px;
   border-radius: 25px;
   background: #FF79DA;
-  background: linear-gradient(171deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
   border: none;
   color: white;
   font-weight: 500;
@@ -124,7 +124,7 @@ form input:focus-visible, form input:focus, form input:hover {
 }
 
 #teaser {
-  background: #f6f6f6;
+  background: #F6F6F6;
   padding: 16px;
   height: 100%;
   width: 100%;
@@ -148,6 +148,55 @@ form input:focus-visible, form input:focus, form input:hover {
   font-size: 18px;
   margin-top: 0px;
   color: #575757;
+}
+
+.functioning {
+  background-color: white;
+}
+.functioning h2 {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+}
+.functioning ul {
+  padding-left: 0px;
+  margin: 32px auto;
+}
+.functioning li {
+  margin-left: 40px;
+}
+.functioning__instruction {
+  display: flex;
+  margin: 24px auto;
+}
+.functioning__instruction .number {
+  padding: 4px 8px;
+  background: #9356DC;
+  border-radius: 50%;
+  align-self: center;
+  font-size: small;
+  color: white;
+  margin-right: -10px;
+  z-index: 2;
+}
+.functioning__instruction div {
+  padding: 14px;
+  border-radius: 24px;
+  background: #F6F6F6;
+  box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
+  width: 80%;
+  font-weight: bold;
+}
+.functioning__instruction div i {
+  font-size: 20px;
+  color: #7E7E7E;
+  padding: 16px;
+}
+.functioning__instruction:hover div {
+  background-color: #F5EDFF;
+}
+.functioning__instruction:hover div i {
+  color: #9356DC;
 }
 
 footer {
