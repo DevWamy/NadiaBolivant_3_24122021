@@ -199,13 +199,84 @@ form input:focus-visible, form input:focus, form input:hover {
   color: #9356DC;
 }
 
+#restaurants {
+  background-color: #F6F6F6;
+  padding: 32px 16px 48px 16px;
+  max-width: 1024px;
+  margin: auto;
+}
+#restaurants .card_restaurant {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+  margin: 16px auto;
+  /***Je n'arrive pas à faire un gradient***/
+}
+#restaurants .card_restaurant:hover {
+  box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
+}
+#restaurants .card_restaurant i:hover {
+  color: #9356DC;
+  font-weight: 600;
+}
+#restaurants .card_restaurant__image {
+  position: relative;
+}
+#restaurants .card_restaurant__image img {
+  border-radius: 16px 16px 0px 0px;
+  height: 200px;
+  object-fit: cover;
+}
+#restaurants .card_restaurant__image .new::after {
+  content: "Nouveau";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 80px;
+  background-color: #99E2D0;
+  top: 13px;
+  right: 13px;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #217460;
+  font-weight: bold;
+}
+#restaurants .card_restaurant .card_restaurant__description {
+  position: relative;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+#restaurants .card_restaurant .card_restaurant__description h3 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+#restaurants .card_restaurant .card_restaurant__description p {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+#restaurants .card_restaurant .card_restaurant__description .heart {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 25px;
+  font-size: 24px;
+}
+#restaurants .card_restaurant .card_restaurant__description .heart:active {
+  color: #9356DC;
+  font-size: 600;
+}
+
 footer {
   padding: 0;
   background: #353535;
   display: flex;
   flex-flow: row wrap;
 }
-footer .footer-container {
+footer .footer_container {
   margin: 10px;
   padding: 10px;
 }
@@ -215,6 +286,9 @@ footer h3 {
   margin: 0px;
 }
 footer a:hover {
+  color: #99E2D0;
+}
+footer i:hover {
   color: #99E2D0;
 }
 footer ul {
