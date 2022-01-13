@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="" /> <!--Mettre le sass?-->
+    <link rel="stylesheet" href="../css/menus.css" />
     <title>OhMyFood</title>
         
       <!--Pour icones-->
 
     <script src="https://kit.fontawesome.com/6ca9202fa2.js" crossorigin="anonymous"></script>
-    
-      <!--Police-->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
   </head>
 
       <!--body-->
@@ -46,8 +37,9 @@
         <div class="menu">
           <div class="menu__title">
               <h1>Le délice des sens</h1>
-              <input class="like-fill-icon" type="checkbox" id="hc2" hidden/>
-              <label class="like-fill-icon"  for="hc2"><i  class="far fa-heart like-fill-icon"></i></label>
+              <div class="heart">
+                <i  class="far fa-heart"></i>
+              </div>
           </div>
           <div class="menu__body">
             <article class="menu__body-section">
@@ -55,7 +47,7 @@
               <div class="menu-items">
                 <ul>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Tartare de thon</h3>
                       <p>Assaisonné au yuzu</p>
                     </div>
@@ -67,7 +59,7 @@
                     </div>      
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Bouchée de homard croustillant</h3>
                       <p>Et sa farandole de petits légumes</p>
                     </div>
@@ -79,7 +71,7 @@
                     </div>   
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Velouté de cèpes</h3>
                       <p>Aux truffes</p>
                     </div>
@@ -98,7 +90,7 @@
               <div class="menu-items">
                 <ul>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Poulet rôti aux herbes de Provence </h3>
                       <p>Et sa crème de truffe</p>
                     </div>
@@ -110,7 +102,7 @@
                     </div>              
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Langouste rôtie</h3>
                       <p>Et ses légumes de saison</p>
                     </div>
@@ -122,7 +114,7 @@
                     </div>     
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Côte de boeuf Angus</h3>
                       <p>Et sa purée de panais</p>
                     </div>
@@ -141,7 +133,7 @@
               <div class="menu-items">
                 <ul>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Farandole de desserts</h3>
                       <p>Du chef</p>
                     </div>
@@ -153,7 +145,7 @@
                     </div>          
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Crème brulée</h3>
                       <p>Revisitée</p>
                     </div>
@@ -165,7 +157,7 @@
                     </div>             
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Tiramisu</h3>
                       <p>À la noisette</p>
                     </div>
@@ -180,34 +172,40 @@
               </div>
             </article>
           </div>
-          <div>
-              <button class="active-button">Commander</button>
+          <div class="command_button">
+              <button class="button">Commander</button>
           </div>                
         </div>
       </section>
     </main>
 
     <!--footer-->
-
+ 
     <footer>
-      <h3>ohmyfood</h3>
-      <ul>
-        <li>
-          <i class="fas fa-utensils"></i>
-          <a href="#">Proposer un restaurant</a>
-        </li>
-        <li>
-          <i class="fas fa-hands-helping"></i>
-          <a href="#">Devenir partenaire</a>
-        </li>
-        <li>
-          <a href="#">Mentions légales</a>
-        </li>
-        <li>
+      <div class="footer_container">
+        <div>
+          <a href="../index.html">
+            <h3>ohmyfood</h3>
+          </a>
+        </div>
+        <ul>
+          <li>
+            <i class="fas fa-utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <i class="fas fa-hands-helping"></i>
+            <a href="#">Devenir partenaire</a>
+          </li>
+          <li>
+            <a href="#">Mentions légales</a>
+          </li>
+          <li>
       <!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. -->
-          <a href="mailto:contact@ohmyfood.com">Contact</a>
-        </li>
-      </ul>
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

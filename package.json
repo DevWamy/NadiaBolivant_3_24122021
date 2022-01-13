@@ -4,19 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css ./sass/menus.scss:./css/menus.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DevWamy/NadiaBolivant_3_24122021.git"
   },
-  "author": "DevWamy",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DevWamy/NadiaBolivant_3_24122021/issues"
   },
-  "homepage": "https://github.com/DevWamy/NadiaBolivant_3_24122021#readme",
-  "dependencies": {
-    "node-sass": "^7.0.1"
-  }
+  "homepage": "https://github.com/DevWamy/NadiaBolivant_3_24122021#readme"
 }

@@ -2,20 +2,17 @@
 #restaurants {
     background-color: $background-light;
     padding: 32px 16px 48px 16px;
-    max-width: 1024px;
-    margin: auto;
+    margin-right: 0px;
 
     .card_restaurant {
         background: #fff;
         border-radius: 16px;
         @include box--shadow(light);
-        margin: 16px auto;
+        margin: 16px 10px;
 
         &:hover {
        @include box--shadow(dark);
         }
-
-            /***Je n'arrive pas à faire un gradient***/
 
             i:hover {
                 color: #9356DC;
@@ -46,9 +43,11 @@
         }
 
         .card_restaurant__description {
-            position: relative;
+            display: flex;
+            justify-content: space-between;
             margin-left: 15px;
             margin-bottom: 5px;
+            @include heart;
             
             h3 {
                 margin-top: 10px;
@@ -56,18 +55,10 @@
             }
 
             p {
-                margin-top: 10px;
-                padding-bottom: 20px;
+                margin-top: 5px;
             }
 
-            .heart { 
-                @include position_button;
-                top: 10px;
-                right: 25px;
-                font-size: 24px;
-                    }
-
-            .heart:active{
+            .heart:hover {
                 color: #9356DC;
                 font-size: 600;
             }

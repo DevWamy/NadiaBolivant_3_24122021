@@ -39,3 +39,13 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin heart {
+
+    .heart { 
+        font-size: 24px;
+        margin-right: 25px;
+        margin-top: 15px;
+    }
+
+}

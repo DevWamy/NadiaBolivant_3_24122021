@@ -1,0 +1,155 @@
+/* ***************** IMPORT ******************* */
+@import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Base/base";
+
+/* ******************* header *************** */
+@import "./Layout/header";
+
+/* ********** Components ********** */
+@import "./Components/button";
+
+/* ***************** footer ************** */
+@import "./Layout/footer";
+
+.thumbnail img {
+    max-height: 260px;
+}
+
+section {
+    background: $background-light;
+
+    .menu {
+        border-radius: 40px 40px 0px 0px;
+        padding: 0px 16px 0px 16px;
+        background: $background-light;
+        position:relative;
+        top: -55px;
+        @include heart;
+
+        &__title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+            
+            h1 {
+                font-family: $font-title;
+                font-size: 30px;
+                font-weight: 500;
+            }
+
+            .heart:hover {
+                color: #9356DC;
+            } 
+        }
+        
+        .menu__body-section {
+            margin-bottom: 48px;
+            width: 100%;
+            
+            ul {
+                padding: 0;
+            }
+
+            h2 {
+                font-weight: 100;
+                text-transform: uppercase;
+                font-size: 19px;
+                margin: 16px;
+                margin-top: 0px;
+                position: relative;
+                max-width: 500px;
+            }
+
+            h2::after {
+                content: "";
+                position: absolute;
+                border-bottom: 3px solid #99E2D0;
+                padding-right: 40px;
+                top: 22px;
+                left: 0;
+            }
+            
+            .menu-item {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                box-shadow: 1px 1px 8px 1px rgba(0,0,0,.5);
+                border-radius: 16px;
+                justify-content: space-between;
+                overflow: hidden;
+                margin: 24px auto;
+                background: white;
+                max-width: 500px;
+                @include box--shadow(light);
+            
+            &:hover {
+                @include box--shadow(dark);
+                }
+                
+
+                
+                    &__title {
+                        padding: 11px 0px 11px 16px;
+                        width: 50% ;
+                        flex-grow: 2;
+                        line-height: 1.5;
+
+                        p, h3 {
+                            margin: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    &__button {
+                        display: flex;
+                        flex-flow: row nowrap;  
+                        align-items: center;
+                        flex: none;
+
+                        p {
+                            padding: 0px 16px;
+                            align-self: end;
+                            font-weight: bold;
+                        }
+                        
+                        div {
+                            background-color: $tertiary-color;
+                            height: 100%;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            font-size: 24px;
+                            max-width:0px;          
+                        
+                            i {
+                                padding: 0 16px;
+                            }
+                        }
+                    }
+
+                    &:hover .menu-item__button {
+                            div {
+                                max-width: 150px;
+                            }
+                    }
+            }      
+        }
+
+        .command_button {
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            
+            button{
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="" /> <!--Mettre le sass?-->
+    <link rel="stylesheet" href="../css/menus.css" /> 
     <title>OhMyFood</title>
         
       <!--Pour icones-->
 
     <script src="https://kit.fontawesome.com/6ca9202fa2.js" crossorigin="anonymous"></script>
-    
-      <!--Police-->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
   </head>
 
       <!--body-->
@@ -46,8 +37,9 @@
         <div class="menu">
           <div class="menu__title">
               <h1>La note enchantée</h1>
-              <input class="like-fill-icon" type="checkbox" id="hc2" hidden/>
-              <label class="like-fill-icon"  for="hc2"><i  class="far fa-heart like-fill-icon"></i></label>
+              <div class="heart">
+                <i  class="far fa-heart"></i>
+              </div>
           </div>
           <div class="menu__body">
             <article class="menu__body-section">
@@ -55,7 +47,7 @@
               <div class="menu-items">
                 <ul>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Ravioles de foie gras</h3>
                       <p>Accompagnés de leur crème à la truffe</p>
                     </div>
@@ -67,7 +59,7 @@
                     </div>      
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Caviar osciètre</h3>
                       <p>Sur blini à la farine de blé noir</p>
                     </div>
@@ -79,7 +71,7 @@
                     </div>   
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Homard et espuma de potiron</h3>
                       <p>Mariné aux zestes d'orange</p>
                     </div>
@@ -91,7 +83,7 @@
                     </div>      
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Foie gras de canard cuit entier</h3>
                       <p>Confiture de figue et pain toasté</p>
                     </div>
@@ -110,7 +102,7 @@
               <div class="menu-items">
                 <ul>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Noix de coquilles Saint-Jacques</h3>
                       <p>Sur lit de purée de céleri-rave</p>
                     </div>
@@ -122,7 +114,7 @@
                     </div>              
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Langoustine poêlée</h3>
                       <p>Purée de patate douce</p>
                     </div>
@@ -134,7 +126,7 @@
                     </div>     
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Mijoté de queue de boeuf</h3>
                       <p>Et riz sauvage aux zestes de citron</p>
                     </div>
@@ -153,7 +145,7 @@
               <div class="menu-items">
                 <ul>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Macaron noisette et chocolat</h3>
                       <p>Glace au caramel brun et sel de Guérande</p>
                     </div>
@@ -165,7 +157,7 @@
                     </div>          
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Baba au rhum revisité </h3>
                       <p>Avec son coulis de citron</p>
                     </div>
@@ -177,7 +169,7 @@
                     </div>             
                   </li>
                   <li class="menu-item"> 
-                    <div class="menu-item__titre">
+                    <div class="menu-item__title">
                       <h3>Tarte au citron meringuée</h3>
                       <p>Déstructurée</p>
                     </div>
@@ -192,34 +184,40 @@
               </div>
             </article>
           </div>
-          <div>
-              <button class="active-button">Commander</button>
+          <div class="command_button" >
+              <button class="button">Commander</button>
           </div>                
         </div>
       </section>
     </main>
 
     <!--footer-->
-
+    
     <footer>
-      <h3>ohmyfood</h3>
-      <ul>
-        <li>
-          <i class="fas fa-utensils"></i>
-          <a href="#">Proposer un restaurant</a>
-        </li>
-        <li>
-          <i class="fas fa-hands-helping"></i>
-          <a href="#">Devenir partenaire</a>
-        </li>
-        <li>
-          <a href="#">Mentions légales</a>
-        </li>
-        <li>
-      <!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. -->
-          <a href="mailto:contact@ohmyfood.com">Contact</a>
-        </li>
-      </ul>
+      <div class="footer_container">
+        <div>
+          <a href="../index.html">
+            <h3>ohmyfood</h3>
+          </a>
+        </div>
+        <ul>
+          <li>
+            <i class="fas fa-utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+          </li>
+          <li>
+            <i class="fas fa-hands-helping"></i>
+            <a href="#">Devenir partenaire</a>
+          </li>
+          <li>
+            <a href="#">Mentions légales</a>
+          </li>
+          <li>
+          <!-- Au clic sur “Contact”, un renvoi vers une adresse mail est effectué. -->
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

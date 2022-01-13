@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* ***************** IMPORT ******************* */
+/* fonts */
+/*colors*/
+/***** MIXINS *******/
+/* box shadow styles */
+/* police de form */
+/* police de teaser */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+/* ******************* header *************** */
+header {
+  padding: 16px;
+  position: relative;
+  /* To show the boxshadow*/
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+header .logo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+header .logo img {
+  object-fit: contain;
+  max-width: 161px;
+  width: 161px;
+}
+
+/* ********** Components ********** */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  background: #FF79DA;
+  background: linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.button:hover {
+  /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
+  L’ombre portée devra également être plus visible.*/
+  background: linear-gradient(171deg, #ff93e1 0%, #a16be0 100%);
+  box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* ***************** footer ************** */
+footer {
+  padding: 0;
+  background: #353535;
+  display: flex;
+  flex-flow: row wrap;
+}
+footer .footer_container {
+  margin: 10px;
+  padding: 10px;
+}
+footer h3 {
+  font-family: "Shrikhand";
+  font-weight: 100;
+  margin: 0px;
+}
+footer a:hover {
+  color: #99E2D0;
+}
+footer i:hover {
+  color: #99E2D0;
+}
+footer ul {
+  padding: 0;
+  color: white;
+}
+footer a {
+  color: white;
+  line-height: 29px;
+}
+footer i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+.thumbnail img {
+  max-height: 260px;
+}
+
+section {
+  background: #F6F6F6;
+}
+section .menu {
+  border-radius: 40px 40px 0px 0px;
+  padding: 0px 16px 0px 16px;
+  background: #F6F6F6;
+  position: relative;
+  top: -55px;
+}
+section .menu .heart {
+  font-size: 24px;
+  margin-right: 25px;
+  margin-top: 15px;
+}
+section .menu__title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+section .menu__title h1 {
+  font-family: "Shrikhand";
+  font-size: 30px;
+  font-weight: 500;
+}
+section .menu__title .heart:hover {
+  color: #9356DC;
+}
+section .menu .menu__body-section {
+  margin-bottom: 48px;
+  width: 100%;
+}
+section .menu .menu__body-section ul {
+  padding: 0;
+}
+section .menu .menu__body-section h2 {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 19px;
+  margin: 16px;
+  margin-top: 0px;
+  position: relative;
+  max-width: 500px;
+}
+section .menu .menu__body-section h2::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid #99E2D0;
+  padding-right: 40px;
+  top: 22px;
+  left: 0;
+}
+section .menu .menu__body-section .menu-item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 24px auto;
+  background: white;
+  max-width: 500px;
+  box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+}
+section .menu .menu__body-section .menu-item:hover {
+  box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
+}
+section .menu .menu__body-section .menu-item__title {
+  padding: 11px 0px 11px 16px;
+  width: 50%;
+  flex-grow: 2;
+  line-height: 1.5;
+}
+section .menu .menu__body-section .menu-item__title p, section .menu .menu__body-section .menu-item__title h3 {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section .menu .menu__body-section .menu-item__button {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: none;
+}
+section .menu .menu__body-section .menu-item__button p {
+  padding: 0px 16px;
+  align-self: end;
+  font-weight: bold;
+}
+section .menu .menu__body-section .menu-item__button div {
+  background-color: #99E2D0;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  max-width: 0px;
+}
+section .menu .menu__body-section .menu-item__button div i {
+  padding: 0 16px;
+}
+section .menu .menu__body-section .menu-item:hover .menu-item__button div {
+  max-width: 150px;
+}
+section .menu .command_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+section .menu .command_button button {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=menus.css.map */
