@@ -17,8 +17,14 @@ header {
         
         img {
             object-fit: contain;
-            max-width: 161px;
-            width: 161px;
+            width: 160px;
+            @include medium {
+            width: $logo-size;
             }
+
+            @include large {
+                width: $logo-size + 30px;
+            }
+        }
     }
 }

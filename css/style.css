@@ -8,10 +8,22 @@ Pages.
 Thèmes.*/
 /* fonts */
 /*colors*/
+/* breakpoints */
 /***** MIXINS *******/
 /* box shadow styles */
 /* police de form */
 /* police de teaser */
+/* position du boutton */
+/* configuration de coeur */
+/* ********** RESPONSIVE ********** */
+/* ***** TABLETS ***** */
+/* ***** DESKTOP ***** */
+/* position de ??? */
+/* configuration bouton */
+/* position carte restaurant responsive */
+/* Taille footer responsive */
+/* position liste footer responsive */
+/* position des descriptifs menus*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
@@ -64,8 +76,17 @@ header .logo {
 }
 header .logo img {
   object-fit: contain;
-  max-width: 161px;
-  width: 161px;
+  width: 160px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .logo img {
+    width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  header .logo img {
+    width: 280px;
+  }
 }
 
 form {
@@ -80,6 +101,11 @@ form label {
   margin-left: 80px;
   color: #353535;
 }
+@media (min-width: 992px) {
+  form label {
+    font-size: 20px;
+  }
+}
 form p {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -92,6 +118,11 @@ form input {
   border: none;
   background: none;
   border: 2px solid transparent;
+}
+@media (min-width: 992px) {
+  form input {
+    font-size: 20px;
+  }
 }
 form ::placeholder {
   color: #353535;
@@ -116,6 +147,21 @@ form input:focus-visible, form input:focus, form input:hover {
   font-weight: 500;
   cursor: pointer;
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .button {
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 992px) {
+  .button {
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    width: 30%;
+  }
 }
 .button:hover {
   /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
@@ -158,12 +204,41 @@ form input:focus-visible, form input:focus, form input:hover {
   margin-bottom: 0px;
   margin-left: 40px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .functioning h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
 .functioning ul {
   padding-left: 0px;
   margin: 32px auto;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .functioning ul {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .functioning ul {
+    display: flex;
+    margin-left: 70px;
+  }
+}
 .functioning li {
   margin-left: 40px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .functioning li {
+    width: 35%;
+    margin: 0px;
+  }
+}
+@media (min-width: 992px) {
+  .functioning li {
+    width: 40%;
+    margin: 0px;
+  }
 }
 .functioning__instruction {
   display: flex;
@@ -174,10 +249,15 @@ form input:focus-visible, form input:focus, form input:hover {
   background: #9356DC;
   border-radius: 50%;
   align-self: center;
-  font-size: small;
+  font-size: 10px;
   color: white;
   margin-right: -10px;
   z-index: 2;
+}
+@media (min-width: 992px) {
+  .functioning__instruction .number {
+    font-size: 14px;
+  }
 }
 .functioning__instruction div {
   padding: 14px;
@@ -187,10 +267,31 @@ form input:focus-visible, form input:focus, form input:hover {
   width: 80%;
   font-weight: bold;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .functioning__instruction div {
+    width: auto;
+  }
+}
 .functioning__instruction div i {
   font-size: 20px;
   color: #7E7E7E;
   padding: 16px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .functioning__instruction div i {
+    padding: 16px 8px;
+  }
+}
+@media (min-width: 992px) {
+  .functioning__instruction div i {
+    padding: 16px 30px 16px 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .functioning__instruction {
+    display: flex;
+    justify-content: center;
+  }
 }
 .functioning__instruction:hover div {
   background-color: #F5EDFF;
@@ -204,28 +305,52 @@ form input:focus-visible, form input:focus, form input:hover {
   padding: 32px 16px 48px 16px;
   margin-right: 0px;
 }
-#restaurants .card_restaurant {
+@media (min-width: 768px) and (max-width: 991px) {
+  #restaurants article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  #restaurants article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+#restaurants article .card_restaurant {
   background: #fff;
   border-radius: 16px;
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
   margin: 16px 10px;
 }
-#restaurants .card_restaurant:hover {
+@media (min-width: 768px) and (max-width: 991px) {
+  #restaurants article .card_restaurant {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  #restaurants article .card_restaurant {
+    width: 20%;
+  }
+}
+#restaurants article .card_restaurant:hover {
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
 }
-#restaurants .card_restaurant i:hover {
+#restaurants article .card_restaurant i:hover {
   color: #9356DC;
   font-weight: 600;
 }
-#restaurants .card_restaurant__image {
+#restaurants article .card_restaurant__image {
   position: relative;
 }
-#restaurants .card_restaurant__image img {
+#restaurants article .card_restaurant__image img {
   border-radius: 16px 16px 0px 0px;
   height: 200px;
   object-fit: cover;
 }
-#restaurants .card_restaurant__image .new::after {
+#restaurants article .card_restaurant__image .new::after {
   content: "Nouveau";
   position: absolute;
   display: flex;
@@ -241,25 +366,25 @@ form input:focus-visible, form input:focus, form input:hover {
   color: #217460;
   font-weight: bold;
 }
-#restaurants .card_restaurant .card_restaurant__description {
+#restaurants article .card_restaurant .card_restaurant__description {
   display: flex;
   justify-content: space-between;
   margin-left: 15px;
   margin-bottom: 5px;
 }
-#restaurants .card_restaurant .card_restaurant__description .heart {
+#restaurants article .card_restaurant .card_restaurant__description .heart {
   font-size: 24px;
   margin-right: 25px;
   margin-top: 15px;
 }
-#restaurants .card_restaurant .card_restaurant__description h3 {
+#restaurants article .card_restaurant .card_restaurant__description h3 {
   margin-top: 10px;
   margin-bottom: 0px;
 }
-#restaurants .card_restaurant .card_restaurant__description p {
+#restaurants article .card_restaurant .card_restaurant__description p {
   margin-top: 5px;
 }
-#restaurants .card_restaurant .card_restaurant__description .heart:hover {
+#restaurants article .card_restaurant .card_restaurant__description .heart:hover {
   color: #9356DC;
   font-size: 600;
 }
@@ -274,10 +399,30 @@ footer .footer_container {
   margin: 10px;
   padding: 10px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .footer_container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer_container {
+    width: 100%;
+  }
+}
 footer h3 {
   font-family: "Shrikhand";
   font-weight: 100;
   margin: 0px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer h3 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 992px) {
+  footer h3 {
+    font-size: 30px;
+  }
 }
 footer a:hover {
   color: #99E2D0;
@@ -289,6 +434,18 @@ footer ul {
   padding: 0;
   color: white;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 footer a {
   color: white;
   line-height: 29px;
@@ -296,6 +453,12 @@ footer a {
 footer i {
   margin-right: 8px;
   width: 16px;
+}
+@media (min-width: 992px) {
+  footer i {
+    font-size: 24px;
+    padding-right: 25px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

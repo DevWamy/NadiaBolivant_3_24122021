@@ -4,67 +4,80 @@
     padding: 32px 16px 48px 16px;
     margin-right: 0px;
 
-    .card_restaurant {
-        background: #fff;
-        border-radius: 16px;
-        @include box--shadow(light);
-        margin: 16px 10px;
-
-        &:hover {
-       @include box--shadow(dark);
+    article {
+        @include medium {
+            @include position_card;
         }
 
-            i:hover {
-                color: #9356DC;
-                font-weight: 600;
+        @include large {
+            @include position_card;
+        }
+    
+        .card_restaurant {
+            background: #fff;
+            border-radius: 16px;
+            @include box--shadow(light);
+            margin: 16px 10px;
+            @include medium {
+                width: 45%;
+            }
+            @include large {
+                width: 20%;
+            }
+
+            &:hover {
+        @include box--shadow(dark);
+            }
+
+                i:hover {
+                    color: #9356DC;
+                    font-weight: 600;
+                    }
+                
+            &__image {
+                position: relative;
+                    img {
+                        border-radius: 16px 16px 0px 0px;
+                        height: 200px;
+                        object-fit: cover; 
+                    }
+                    .new::after {
+                        content: "Nouveau";
+                        @include position_button;
+                        height: 30px;
+                        width: 80px;
+                        background-color: $tertiary-color;
+                        top: 13px;
+                        right: 13px;
+                        font-size: 14px;
+                        border-radius: 3px;
+                        color: darken($color: $tertiary-color, $amount: 45);
+                        font-weight: bold;
+                    }
+            }
+
+            .card_restaurant__description {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 15px;
+                margin-bottom: 5px;
+                @include heart;
+                
+                h3 {
+                    margin-top: 10px;
+                    margin-bottom: 0px;
                 }
-            
-        &__image {
-            position: relative;
-                img {
-                    border-radius: 16px 16px 0px 0px;
-                    height: 200px;
-                    object-fit: cover; 
+
+                p {
+                    margin-top: 5px;
                 }
-                .new::after {
-                    content: "Nouveau";
-                    @include position_button;
-                    height: 30px;
-                    width: 80px;
-                    background-color: $tertiary-color;
-                    
-                    top: 13px;
-                    right: 13px;
-                    font-size: 14px;
-                    border-radius: 3px;
-                    color: darken($color: $tertiary-color, $amount: 45);
-                    font-weight: bold;
-                  }
+
+                .heart:hover {
+                    color: #9356DC;
+                    font-size: 600;
+                }
+            }
         }
-
-        .card_restaurant__description {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 15px;
-            margin-bottom: 5px;
-            @include heart;
-            
-            h3 {
-                margin-top: 10px;
-                margin-bottom: 0px;
-            }
-
-            p {
-                margin-top: 5px;
-            }
-
-            .heart:hover {
-                color: #9356DC;
-                font-size: 600;
-            }
-
-        }
-    }
-
+    }   
 }
 

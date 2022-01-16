@@ -6,32 +6,61 @@
         margin-top: 50px;
         margin-bottom: 0px;
         margin-left: 40px;
+        
+        @include medium {
+            display: flex;
+            justify-content: center ;
+        } 
+
     }
 
-    ul {
-        padding-left: 0px;
-        margin: 32px auto;
+        ul {
+            padding-left: 0px;
+            margin: 32px auto;
+
+            @include medium {
+            display: flex; 
+            }
+
+            @include large {
+                display: flex;
+                margin-left: 70px;
+            }
+
         }
 
         li {
             margin-left: 40px;
+
+            @include medium {
+                width: 35% ;
+                margin: 0px;
+           }
+
+           @include large {
+            width: 40% ;
+            margin: 0px;
+           }
         }
 
     &__instruction {
         display: flex;
         margin: 24px auto;
-
+        
             .number {
                 padding: 4px 8px;
                 background: $primary-color;
                 border-radius: 50%;
                 align-self: center;
-                font-size: small;
+                font-size: 10px;
                 color: white;
                 margin-right: -10px;
                 z-index: 2;
+                @include large {
+                    font-size: 14px;
+                }
             }
-
+            
             div {
                 padding: 14px;
                 border-radius: 24px;
@@ -39,13 +68,29 @@
                 box-shadow: 0px 3px 9px 0px rgba(126, 126, 126, 0.3);
                 width: 80%;
                 font-weight: bold;
+
+                @include medium {
+                    width: auto;
+                }                
             }
             
             div i {
                 font-size: 20px;
                 color: $picto-color;
                 padding: 16px;
+                
+                @include medium {
+                    padding: 16px 8px;
+                }
+                @include large {
+                    padding: 16px 30px 16px 30px;
+                }
             }
+
+            @include medium {
+                 @include responsive_center ;
+            } 
+
     }
 
     &__instruction:hover {

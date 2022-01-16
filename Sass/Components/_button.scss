@@ -13,6 +13,17 @@
     font-weight: 500;
     cursor: pointer;
     @include box--shadow("light");
+    
+    @include medium {
+      @include responsive_button;
+    }
+
+    @include large {
+      @include responsive_button;
+      width: 30%;
+     
+    }
+    
     &:hover {
       /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
   L’ombre portée devra également être plus visible.*/

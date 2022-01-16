@@ -3,16 +3,29 @@ footer {
     background: $background-black;
     display: flex;
     flex-flow: row wrap;
-
+    
         .footer_container {
             margin: 10px;
             padding: 10px;
+            @include medium {
+                @include footer_size;
+            }
+            @include large {
+                @include footer_size;
+            }
+
         }
 
         h3 {
             font-family: $font-title;
             font-weight: 100;
             margin: 0px;
+            @include medium {
+                font-size: 28px;
+            }
+            @include large {
+                font-size: 30px;
+            }
         }
         a:hover {
             color: $tertiary-color;
@@ -24,7 +37,13 @@ footer {
 
         ul { 
             padding: 0;
-            color: white; 
+            color: white;
+            @include medium {
+                @include footer_li;
+            } 
+            @include large {
+                @include footer_li;
+            }
         }
 
         a {
@@ -35,5 +54,9 @@ footer {
         i {
              margin-right: 8px;
             width: 16px;
+            @include large {
+                font-size: 24px;
+                padding-right: 25px;
+            }
             }
 }

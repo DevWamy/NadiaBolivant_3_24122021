@@ -2,10 +2,22 @@
 /* ***************** IMPORT ******************* */
 /* fonts */
 /*colors*/
+/* breakpoints */
 /***** MIXINS *******/
 /* box shadow styles */
 /* police de form */
 /* police de teaser */
+/* position du boutton */
+/* configuration de coeur */
+/* ********** RESPONSIVE ********** */
+/* ***** TABLETS ***** */
+/* ***** DESKTOP ***** */
+/* position de ??? */
+/* configuration bouton */
+/* position carte restaurant responsive */
+/* Taille footer responsive */
+/* position liste footer responsive */
+/* position des descriptifs menus*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
@@ -59,8 +71,17 @@ header .logo {
 }
 header .logo img {
   object-fit: contain;
-  max-width: 161px;
-  width: 161px;
+  width: 160px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .logo img {
+    width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  header .logo img {
+    width: 280px;
+  }
 }
 
 /* ********** Components ********** */
@@ -80,6 +101,21 @@ header .logo img {
   cursor: pointer;
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .button {
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 992px) {
+  .button {
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    width: 30%;
+  }
+}
 .button:hover {
   /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
   L’ombre portée devra également être plus visible.*/
@@ -98,10 +134,30 @@ footer .footer_container {
   margin: 10px;
   padding: 10px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer .footer_container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer_container {
+    width: 100%;
+  }
+}
 footer h3 {
   font-family: "Shrikhand";
   font-weight: 100;
   margin: 0px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer h3 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 992px) {
+  footer h3 {
+    font-size: 30px;
+  }
 }
 footer a:hover {
   color: #99E2D0;
@@ -113,6 +169,18 @@ footer ul {
   padding: 0;
   color: white;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 footer a {
   color: white;
   line-height: 29px;
@@ -120,6 +188,23 @@ footer a {
 footer i {
   margin-right: 8px;
   width: 16px;
+}
+@media (min-width: 992px) {
+  footer i {
+    font-size: 24px;
+    padding-right: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  i {
+    font-size: 26px;
+  }
+}
+@media (min-width: 992px) {
+  i {
+    font-size: 28px;
+  }
 }
 
 .thumbnail img {
@@ -180,6 +265,20 @@ section .menu .menu__body-section h2::after {
   top: 22px;
   left: 0;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  section .menu .menu__body-section ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  section .menu .menu__body-section ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
 section .menu .menu__body-section .menu-item {
   display: flex;
   flex-flow: row nowrap;
@@ -192,6 +291,16 @@ section .menu .menu__body-section .menu-item {
   background: white;
   max-width: 500px;
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .menu .menu__body-section .menu-item {
+    width: 30%;
+  }
+}
+@media (min-width: 992px) {
+  section .menu .menu__body-section .menu-item {
+    width: 30%;
+  }
 }
 section .menu .menu__body-section .menu-item:hover {
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
@@ -243,6 +352,18 @@ section .menu .command_button {
 section .menu .command_button button {
   font-size: 16px;
   font-weight: 500;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .menu .command_button button {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 992px) {
+  section .menu .command_button button {
+    font-size: 22px;
+    font-weight: 600;
+  }
 }
 
 /*# sourceMappingURL=menus.css.map */

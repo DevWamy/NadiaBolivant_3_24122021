@@ -12,6 +12,15 @@
 /* ***************** footer ************** */
 @import "./Layout/footer";
 
+i {
+    @include medium {
+        font-size: 26px;
+    }
+    @include large {
+        font-size: 28px;
+    }
+}
+
 .thumbnail img {
     max-height: 260px;
 }
@@ -72,72 +81,83 @@ section {
                 left: 0;
             }
             
-            .menu-item {
-                display: flex;
-                flex-flow: row nowrap;
-                width: 100%;
-                box-shadow: 1px 1px 8px 1px rgba(0,0,0,.5);
-                border-radius: 16px;
-                justify-content: space-between;
-                overflow: hidden;
-                margin: 24px auto;
-                background: white;
-                max-width: 500px;
-                @include box--shadow(light);
-            
-            &:hover {
-                @include box--shadow(dark);
+            ul {
+                @include medium{
+                    @include menu_ul;
                 }
-                
-
-                
-                    &__title {
-                        padding: 11px 0px 11px 16px;
-                        width: 50% ;
-                        flex-grow: 2;
-                        line-height: 1.5;
-
-                        p, h3 {
-                            margin: 0;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
+                @include large {
+                    @include menu_ul;
+                }
+            }
+                .menu-item {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    width: 100%;
+                    box-shadow: 1px 1px 8px 1px rgba(0,0,0,.5);
+                    border-radius: 16px;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    margin: 24px auto;
+                    background: white;
+                    max-width: 500px;
+                    @include box--shadow(light);
+                    @include medium {
+                        width: 30%;
                     }
+                    @include large {
+                        width: 30%;
+                    }
+                &:hover {
+                    @include box--shadow(dark);
+                    }
+                                
+                        &__title {
+                            padding: 11px 0px 11px 16px;
+                            width: 50% ;
+                            flex-grow: 2;
+                            line-height: 1.5;
 
-                    &__button {
-                        display: flex;
-                        flex-flow: row nowrap;  
-                        align-items: center;
-                        flex: none;
-
-                        p {
-                            padding: 0px 16px;
-                            align-self: end;
-                            font-weight: bold;
+                            p, h3 {
+                                margin: 0;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
                         }
-                        
-                        div {
-                            background-color: $tertiary-color;
-                            height: 100%;
-                            color: white;
+
+                        &__button {
                             display: flex;
+                            flex-flow: row nowrap;  
                             align-items: center;
-                            font-size: 24px;
-                            max-width:0px;          
-                        
-                            i {
-                                padding: 0 16px;
+                            flex: none;
+
+                            p {
+                                padding: 0px 16px;
+                                align-self: end;
+                                font-weight: bold;
+                            }
+                            
+                            div {
+                                background-color: $tertiary-color;
+                                height: 100%;
+                                color: white;
+                                display: flex;
+                                align-items: center;
+                                font-size: 24px;
+                                max-width:0px;          
+                            
+                                i {
+                                    padding: 0 16px;
+                                }
                             }
                         }
-                    }
 
-                    &:hover .menu-item__button {
-                            div {
-                                max-width: 150px;
-                            }
-                    }
-            }      
+                        &:hover .menu-item__button {
+                                div {
+                                    max-width: 150px;
+                                }
+                        }
+                }      
         }
 
         .command_button {
@@ -149,6 +169,14 @@ section {
             button{
                 font-size: 16px;
                 font-weight: 500;
+                @include medium {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                @include large {
+                    font-size: 22px;
+                    font-weight: 600;
+                }
             }
         }
     }
