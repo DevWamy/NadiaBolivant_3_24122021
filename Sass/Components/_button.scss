@@ -6,13 +6,13 @@
     width: 60%;
     height: 50px;
     border-radius: 25px;
-    background: $secondary-color;
-    background: $color-gradient;
+    background: $secondary_color;
+    background: $color_gradient;
     border: none;
     color: white;
     font-weight: 500;
     cursor: pointer;
-    @include box--shadow("light");
+    @include box_shadow("light");
     
     @include medium {
       @include responsive_button;
@@ -27,8 +27,8 @@
     &:hover {
       /* Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
   L’ombre portée devra également être plus visible.*/
-      background: $gradient-clearer;
-      @include box--shadow("dark");
+      background: $gradient_clearer;
+      @include box_shadow("dark");
     }
   }
   

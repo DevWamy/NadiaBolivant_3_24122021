@@ -1,7 +1,7 @@
 header {
     padding: 16px;
     position: relative; /* To show the boxshadow*/
-    @include box--shadow("header");
+    @include box_shadow("header");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,12 +19,12 @@ header {
             object-fit: contain;
             width: 160px;
             @include medium {
-            width: $logo-size;
+            width: $logo_size;
             }
 
             @include large {
-                width: $logo-size + 30px;
+                width: $logo_size + 30px;
             }
         }
-    }
+    }  
 }

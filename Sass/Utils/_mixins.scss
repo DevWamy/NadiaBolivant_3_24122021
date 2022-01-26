@@ -1,7 +1,7 @@
 /***** MIXINS *******/
 
 /* box shadow styles */
-@mixin box--shadow($style) {
+@mixin box_shadow($style) {
     @if ($style=="light") {
     box-shadow: 3px 6px 8px 0px rgba(0, 0, 0,0.15);
     }
@@ -15,8 +15,8 @@
 
 /* police de form */
 @mixin form_police {
-    font-size: $font-size;
-    color: $font-secondary;
+    font-size: $font_size;
+    color: $font_secondary;
     font-weight: bold;
 }
 
@@ -70,7 +70,7 @@
     }
   }
 
-/* position de ??? */
+/* position du titre section functionning */
 @mixin responsive_center {
     display: flex;
     justify-content: center ;
@@ -99,7 +99,6 @@
 @mixin footer_li {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 /* position des descriptifs menus*/

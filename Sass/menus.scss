@@ -1,6 +1,7 @@
-/* ***************** IMPORT ******************* */
+/* ***************** Général ******************* */
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./Utils/keyframes";
 @import "./Base/base";
 
 /* ******************* header *************** */
@@ -26,12 +27,12 @@ i {
 }
 
 section {
-    background: $background-light;
+    background: $background_light;
 
     .menu {
         border-radius: 40px 40px 0px 0px;
         padding: 0px 16px 0px 16px;
-        background: $background-light;
+        background: $background_light;
         position:relative;
         top: -55px;
         @include heart;
@@ -44,7 +45,7 @@ section {
             margin-top: 16px;
             
             h1 {
-                font-family: $font-title;
+                font-family: $font_title;
                 font-size: 30px;
                 font-weight: 500;
             }
@@ -54,110 +55,128 @@ section {
             } 
         }
         
-        .menu__body-section {
+        .menu__body_section {
             margin-bottom: 48px;
             width: 100%;
             
-            ul {
-                padding: 0;
-            }
-
-            h2 {
-                font-weight: 100;
-                text-transform: uppercase;
-                font-size: 19px;
-                margin: 16px;
-                margin-top: 0px;
-                position: relative;
-                max-width: 500px;
-            }
-
-            h2::after {
-                content: "";
-                position: absolute;
-                border-bottom: 3px solid #99E2D0;
-                padding-right: 40px;
-                top: 22px;
-                left: 0;
-            }
-            
-            ul {
-                @include medium{
-                    @include menu_ul;
+            .menu_items__animation_1 {
+                animation: progressive_onset 1s ease-in;
+              }
+            .menu_items__animation_2 {
+                animation: progressive_onset 2s ease-in;
+              }
+              .menu_items__animation_3 {
+                animation: progressive_onset 3s ease-in;
+              }
+              
+                ul {
+                    padding: 0;
                 }
-                @include large {
-                    @include menu_ul;
-                }
-            }
-                .menu-item {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    width: 100%;
-                    box-shadow: 1px 1px 8px 1px rgba(0,0,0,.5);
-                    border-radius: 16px;
-                    justify-content: space-between;
-                    overflow: hidden;
-                    margin: 24px auto;
-                    background: white;
+
+                h2 {
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    font-size: 19px;
+                    margin: 16px;
+                    margin-top: 0px;
+                    position: relative;
                     max-width: 500px;
-                    @include box--shadow(light);
-                    @include medium {
-                        width: 30%;
+                }
+
+                h2::after {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 3px solid #99E2D0;
+                    padding-right: 40px;
+                    top: 22px;
+                    left: 0;
+                }
+                
+                ul {
+                    @include medium{
+                        @include menu_ul;
                     }
                     @include large {
-                        width: 30%;
+                        @include menu_ul;
                     }
-                &:hover {
-                    @include box--shadow(dark);
-                    }
-                                
-                        &__title {
-                            padding: 11px 0px 11px 16px;
-                            width: 50% ;
-                            flex-grow: 2;
-                            line-height: 1.5;
-
-                            p, h3 {
-                                margin: 0;
-                                white-space: nowrap;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                            }
+                }
+                    .menu_item {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        width: 100%;
+                        box-shadow: 1px 1px 8px 1px rgba(0,0,0,.5);
+                        border-radius: 16px;
+                        justify-content: space-between;
+                        overflow: hidden;
+                        margin: 24px auto;
+                        background: white;
+                        max-width: 500px;
+                        
+                        @include box_shadow(light);
+                        @include medium {
+                            width: 30%;
                         }
+                        @include large {
+                            width: 30%;
+                        }
+                    &:hover {
+                        @include box_shadow(dark);
+                        }
+                                    
+                            &__title {
+                                padding: 11px 0px 11px 16px;
+                                width: 50% ;
+                                flex-grow: 2;
+                                line-height: 1.5;
 
-                        &__button {
-                            display: flex;
-                            flex-flow: row nowrap;  
-                            align-items: center;
-                            flex: none;
-
-                            p {
-                                padding: 0px 16px;
-                                align-self: end;
-                                font-weight: bold;
+                                p, h3 {
+                                    margin: 0;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
                             }
-                            
-                            div {
-                                background-color: $tertiary-color;
-                                height: 100%;
-                                color: white;
+
+                            &__button {
                                 display: flex;
+                                flex-flow: row nowrap;  
                                 align-items: center;
-                                font-size: 24px;
-                                max-width:0px;          
-                            
-                                i {
-                                    padding: 0 16px;
+                                flex: none;
+
+                                p {
+                                    padding: 0px 16px;
+                                    align-self: end;
+                                    font-weight: bold;
+                                }
+                                
+                                div {
+                                    background-color: $tertiary_color;
+                                    height: 100%;
+                                    color: white;
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 24px;
+                                    max-width:0px;
+                                    transition: max-width 500ms ease-in-out;          
+                                
+                                    i {
+                                        padding: 0 16px;
+                                    }
                                 }
                             }
-                        }
 
-                        &:hover .menu-item__button {
+                            &:hover .menu_item__button {
+                                i { 
+                                    transform: rotate(1turn);
+                                    transition: transform 500ms ease-in-out;
+                                } 
+
                                 div {
-                                    max-width: 150px;
+                                        max-width: 150px;
                                 }
-                        }
-                }      
+
+                            }
+                    }      
         }
 
         .command_button {

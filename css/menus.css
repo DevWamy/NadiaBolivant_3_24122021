@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* ***************** IMPORT ******************* */
+/* ***************** Général ******************* */
 /* fonts */
 /*colors*/
 /* breakpoints */
@@ -12,13 +12,46 @@
 /* ********** RESPONSIVE ********** */
 /* ***** TABLETS ***** */
 /* ***** DESKTOP ***** */
-/* position de ??? */
+/* position du titre section functionning */
 /* configuration bouton */
 /* position carte restaurant responsive */
 /* Taille footer responsive */
 /* position liste footer responsive */
 /* position des descriptifs menus*/
+/* ******************** Animation Apparition progressive **************** */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Shrikhand&display=swap");
+@keyframes progressive_onset {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ********** Animation loader ********** */
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes progressive_unset {
+  99% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -33,20 +66,17 @@ body {
   font-size: 16px;
   font-family: "Roboto";
 }
-
-img {
+body img {
   height: 100%;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
-
-a {
+body a {
   text-decoration: none;
   color: black;
 }
-
-li {
+body li {
   list-style: none;
 }
 
@@ -162,9 +192,6 @@ footer h3 {
 footer a:hover {
   color: #99E2D0;
 }
-footer i:hover {
-  color: #99E2D0;
-}
 footer ul {
   padding: 0;
   color: white;
@@ -181,6 +208,9 @@ footer ul {
     justify-content: space-evenly;
   }
 }
+footer ul li:hover {
+  color: #99E2D0;
+}
 footer a {
   color: white;
   line-height: 29px;
@@ -188,6 +218,11 @@ footer a {
 footer i {
   margin-right: 8px;
   width: 16px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer i {
+    padding-right: 25px;
+  }
 }
 @media (min-width: 992px) {
   footer i {
@@ -241,14 +276,23 @@ section .menu__title h1 {
 section .menu__title .heart:hover {
   color: #9356DC;
 }
-section .menu .menu__body-section {
+section .menu .menu__body_section {
   margin-bottom: 48px;
   width: 100%;
 }
-section .menu .menu__body-section ul {
+section .menu .menu__body_section .menu_items__animation_1 {
+  animation: progressive_onset 1s ease-in;
+}
+section .menu .menu__body_section .menu_items__animation_2 {
+  animation: progressive_onset 2s ease-in;
+}
+section .menu .menu__body_section .menu_items__animation_3 {
+  animation: progressive_onset 3s ease-in;
+}
+section .menu .menu__body_section ul {
   padding: 0;
 }
-section .menu .menu__body-section h2 {
+section .menu .menu__body_section h2 {
   font-weight: 100;
   text-transform: uppercase;
   font-size: 19px;
@@ -257,7 +301,7 @@ section .menu .menu__body-section h2 {
   position: relative;
   max-width: 500px;
 }
-section .menu .menu__body-section h2::after {
+section .menu .menu__body_section h2::after {
   content: "";
   position: absolute;
   border-bottom: 3px solid #99E2D0;
@@ -266,20 +310,20 @@ section .menu .menu__body-section h2::after {
   left: 0;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  section .menu .menu__body-section ul {
+  section .menu .menu__body_section ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
   }
 }
 @media (min-width: 992px) {
-  section .menu .menu__body-section ul {
+  section .menu .menu__body_section ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
   }
 }
-section .menu .menu__body-section .menu-item {
+section .menu .menu__body_section .menu_item {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
@@ -293,42 +337,42 @@ section .menu .menu__body-section .menu-item {
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  section .menu .menu__body-section .menu-item {
+  section .menu .menu__body_section .menu_item {
     width: 30%;
   }
 }
 @media (min-width: 992px) {
-  section .menu .menu__body-section .menu-item {
+  section .menu .menu__body_section .menu_item {
     width: 30%;
   }
 }
-section .menu .menu__body-section .menu-item:hover {
+section .menu .menu__body_section .menu_item:hover {
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
 }
-section .menu .menu__body-section .menu-item__title {
+section .menu .menu__body_section .menu_item__title {
   padding: 11px 0px 11px 16px;
   width: 50%;
   flex-grow: 2;
   line-height: 1.5;
 }
-section .menu .menu__body-section .menu-item__title p, section .menu .menu__body-section .menu-item__title h3 {
+section .menu .menu__body_section .menu_item__title p, section .menu .menu__body_section .menu_item__title h3 {
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-section .menu .menu__body-section .menu-item__button {
+section .menu .menu__body_section .menu_item__button {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   flex: none;
 }
-section .menu .menu__body-section .menu-item__button p {
+section .menu .menu__body_section .menu_item__button p {
   padding: 0px 16px;
   align-self: end;
   font-weight: bold;
 }
-section .menu .menu__body-section .menu-item__button div {
+section .menu .menu__body_section .menu_item__button div {
   background-color: #99E2D0;
   height: 100%;
   color: white;
@@ -336,11 +380,16 @@ section .menu .menu__body-section .menu-item__button div {
   align-items: center;
   font-size: 24px;
   max-width: 0px;
+  transition: max-width 500ms ease-in-out;
 }
-section .menu .menu__body-section .menu-item__button div i {
+section .menu .menu__body_section .menu_item__button div i {
   padding: 0 16px;
 }
-section .menu .menu__body-section .menu-item:hover .menu-item__button div {
+section .menu .menu__body_section .menu_item:hover .menu_item__button i {
+  transform: rotate(1turn);
+  transition: transform 500ms ease-in-out;
+}
+section .menu .menu__body_section .menu_item:hover .menu_item__button div {
   max-width: 150px;
 }
 section .menu .command_button {

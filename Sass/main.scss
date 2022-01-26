@@ -7,11 +7,13 @@ Pages.
 Thèmes.*/
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./Utils/keyframes";
 @import "./Base/base";
 @import "./Layout/header";
-@import "./Components/form";
-@import "./Components/button";
+@import "./Layout/loader";
 @import "./Layout/teaser";
 @import "./Layout/functioning";
 @import "./Layout/restaurants";
 @import "./Layout/footer";
+@import "./Components/form";
+@import "./Components/button";

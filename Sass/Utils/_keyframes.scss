@@ -1,0 +1,33 @@
+/* ******************** Animation Apparition progressive **************** */
+@keyframes progressive_onset {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+/* ********** Animation loader ********** */
+  @keyframes spinner {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+  }
+
+  @keyframes progressive_unset {
+    99% {
+      opacity: 1;
+      z-index: 10;
+    }
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+
+  

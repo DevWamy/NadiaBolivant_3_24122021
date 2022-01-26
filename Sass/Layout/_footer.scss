@@ -1,6 +1,6 @@
 footer {
     padding: 0;
-    background: $background-black;
+    background: $background_black;
     display: flex;
     flex-flow: row wrap;
     
@@ -13,11 +13,10 @@ footer {
             @include large {
                 @include footer_size;
             }
-
         }
 
         h3 {
-            font-family: $font-title;
+            font-family: $font_title;
             font-weight: 100;
             margin: 0px;
             @include medium {
@@ -27,14 +26,11 @@ footer {
                 font-size: 30px;
             }
         }
+
         a:hover {
-            color: $tertiary-color;
+            color: $tertiary_color;
         }
-
-        i:hover {
-            color: $tertiary-color;
-        }
-
+        
         ul { 
             padding: 0;
             color: white;
@@ -43,6 +39,9 @@ footer {
             } 
             @include large {
                 @include footer_li;
+            }
+            li:hover {
+                color: $tertiary_color;
             }
         }
 
@@ -54,9 +53,13 @@ footer {
         i {
              margin-right: 8px;
             width: 16px;
+            @include medium {
+                padding-right: 25px;
+            }
             @include large {
+
                 font-size: 24px;
                 padding-right: 25px;
             }
-            }
+        }
 }

@@ -1,6 +1,6 @@
 
 #restaurants {
-    background-color: $background-light;
+    background-color: $background_light;
     padding: 32px 16px 48px 16px;
     margin-right: 0px;
 
@@ -16,7 +16,7 @@
         .card_restaurant {
             background: #fff;
             border-radius: 16px;
-            @include box--shadow(light);
+            @include box_shadow(light);
             margin: 16px 10px;
             @include medium {
                 width: 45%;
@@ -26,7 +26,7 @@
             }
 
             &:hover {
-        @include box--shadow(dark);
+            @include box_shadow(dark);
             }
 
                 i:hover {
@@ -44,14 +44,13 @@
                     .new::after {
                         content: "Nouveau";
                         @include position_button;
-                        height: 30px;
-                        width: 80px;
-                        background-color: $tertiary-color;
+                        padding: 7px 13px;
+                        background-color: $tertiary_color;
                         top: 13px;
                         right: 13px;
                         font-size: 14px;
                         border-radius: 3px;
-                        color: darken($color: $tertiary-color, $amount: 45);
+                        color: darken($color: $tertiary_color, $amount: 45);
                         font-weight: bold;
                     }
             }

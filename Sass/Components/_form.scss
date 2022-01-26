@@ -4,11 +4,11 @@ form {
     justify-content: center;
     align-items: center;
     padding: 8px;
-    background: $background-dark;
+    background: $background_dark;
 
         label{
             margin-left: 80px;
-            color: $font-secondary;
+            color: $font_secondary;
             @include large {
                 font-size: 20px;
             }
@@ -31,11 +31,11 @@ form {
         }
 
         ::placeholder {
-           color: $font-secondary;
+           color: $font_secondary;
         }
 
         input:focus-visible, input:focus, input:hover {
-            border-bottom: 2px solid $tertiary-color;
+            border-bottom: 2px solid $tertiary_color;
             outline: none;
         }
 
