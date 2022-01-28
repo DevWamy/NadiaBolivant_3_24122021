@@ -58,6 +58,20 @@ Thèmes.*/
     z-index: -1;
   }
 }
+@keyframes heart_animation {
+  0% {
+    background: left bottom 0%/100% 0% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: left bottom 0%/100% 100% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -346,10 +360,6 @@ header .logo img {
 #restaurants article .card_restaurant:hover {
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
 }
-#restaurants article .card_restaurant i:hover {
-  color: #9356DC;
-  font-weight: 600;
-}
 #restaurants article .card_restaurant__image {
   position: relative;
 }
@@ -391,9 +401,27 @@ header .logo img {
 #restaurants article .card_restaurant .card_restaurant__description p {
   margin-top: 5px;
 }
-#restaurants article .card_restaurant .card_restaurant__description .heart:hover {
-  color: #9356DC;
-  font-size: 600;
+#restaurants article .card_restaurant .card_restaurant__description .heart {
+  position: relative;
+}
+#restaurants article .card_restaurant .card_restaurant__description .heart .fa-heart::before {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+#restaurants article .card_restaurant .card_restaurant__description .heart .fa-heart:hover::after {
+  content: "\f004";
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  z-index: 0;
+  font-size: 22px;
+  font-weight: bold;
+  background: left bottom 0%/100% 0% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart_animation 500ms forwards;
 }
 
 footer {

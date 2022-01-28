@@ -28,11 +28,6 @@
             &:hover {
             @include box_shadow(dark);
             }
-
-                i:hover {
-                    color: #9356DC;
-                    font-weight: 600;
-                    }
                 
             &__image {
                 position: relative;
@@ -70,13 +65,33 @@
                 p {
                     margin-top: 5px;
                 }
+                
+                .heart {
+                    position: relative;
 
-                .heart:hover {
-                    color: #9356DC;
-                    font-size: 600;
-                }
+                    .fa-heart::before {
+                        position: relative;
+                        z-index: 1;
+                        cursor: pointer;
+                        }
+                    
+                    .fa-heart:hover::after {
+                        content: "\f004";
+                        position: absolute;
+                        top: 2px;
+                        right: 1px;
+                        z-index: 0;
+                        font-size: 22px;
+                        font-weight: bold;
+                        background: left bottom 0% / 100% 0% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        animation: heart_animation 500ms forwards;
+                    }
+                }   
             }
         }
-    }   
+    }
 }
-
+ 

@@ -29,5 +29,18 @@
     }
   }
 
-
+  @keyframes heart_animation {
+    0% {
+        background: left bottom 0% / 100% 0% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        background: left bottom 0% / 100% 100% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+  } 
   

@@ -52,6 +52,20 @@
     z-index: -1;
   }
 }
+@keyframes heart_animation {
+  0% {
+    background: left bottom 0%/100% 0% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: left bottom 0%/100% 100% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -273,8 +287,39 @@ section .menu__title h1 {
   font-size: 30px;
   font-weight: 500;
 }
-section .menu__title .heart:hover {
-  color: #9356DC;
+section .menu__title .heart {
+  position: relative;
+}
+section .menu__title .heart .fa-heart::before {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+section .menu__title .heart .fa-heart:hover::after {
+  content: "\f004";
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  z-index: 0;
+  font-size: 23px;
+  font-weight: bold;
+  background: left bottom 0%/100% 0% no-repeat linear-gradient(171deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart_animation 500ms forwards;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section .menu__title .heart .fa-heart:hover::after {
+    top: 1px;
+    right: 1px;
+  }
+}
+@media (min-width: 992px) {
+  section .menu__title .heart .fa-heart:hover::after {
+    top: 2px;
+    right: 2.5px;
+  }
 }
 section .menu .menu__body_section {
   margin-bottom: 48px;
