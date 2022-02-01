@@ -165,6 +165,8 @@ header .logo img {
   L’ombre portée devra également être plus visible.*/
   background: linear-gradient(171deg, #ff93e1 0%, #a16be0 100%);
   box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+  transition: 1s;
 }
 
 /* ***************** footer ************** */
